@@ -323,7 +323,7 @@ def interpret_yes_no(boolstr: str) -> bool:
     if boolstr not in ["yes", "no"]:
         raise exceptions.WrongDataTypeException(f"Cannot interpret following string as boolean: {boolstr}.")
 
-    return True if boolstr == "yes" else False
+    return False if boolstr == "no" else True
 
 
 def printer(report: dict, indent_level: int = 0) -> None:  # pragma: no cover - exclude from pytest coverage
